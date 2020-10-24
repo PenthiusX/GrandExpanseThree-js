@@ -1,0 +1,25 @@
+[class^="button"] {
+  border: 1px solid black;
+  background: black;
+  color: white;
+  padding: 0 rem(20);
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "filson-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: rem(12);
+  font-weight: 300;
+  line-height: rem(50);
+  letter-spacing: 0.07em;
+  transition: all 300ms linear;
+
+  &:hover {
+    background: white;
+    color: black;
+    border-color: black;
+  }
+
+  &.inactive {
+    cursor: default;
+    pointer-events: none;
+  }
+}

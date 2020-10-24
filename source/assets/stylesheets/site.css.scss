@@ -1,0 +1,12 @@
+@import "core/variables";
+@import "core/functions";
+@import "core/mixins";
+@import "core/normalize";
+@import "core/components";
+
+@import "vendors/slick";
+@import "vendors/slick-theme";
+
+@import "more/behaviors";
+@import "home/base";
+@import "home/large";

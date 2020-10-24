@@ -1,0 +1,120 @@
+<!--
+=====================================================================
+Header
+=====================================================================
+-->
+<header id="header">
+  <nav>
+    <ul>
+      <li class="link-credits" ge-go="credits" ng-class="{'active': 'credits' == activeSection}">Credits</li>
+      <li class="link-home" ge-go="home" ng-class="{'active': 'home' == activeSection}"><span class="b"></span><%= image_tag 'icon_home.svg' %><span class="a"></span></li>
+      <li class="link-about" ge-go="about" ng-class="{'active': 'about' == activeSection}">About</li>
+    </ul>
+    <span class="marker {{activeSection}}"></span>
+  </nav>
+</header>
+
+
+
+<!--
+=====================================================================
+Home
+=====================================================================
+-->
+<section id="home" ng-class="{'active': 'home' == activeSection}">
+  <!-- <h1>Grand Expanse</h1> -->
+  <h2><span><i>A VR Music <br> Video Experience</i></span></h2>
+  <h3><span><i>Featuring <br> Martina Sorbara</i></span></h3>
+  <button class="pointerbutton"><%= image_tag 'arrow.svg' %></button>
+</section>
+
+
+
+<!--
+=====================================================================
+About
+=====================================================================
+-->
+<section id="about" ng-class="{'active': 'about' == activeSection}">
+  <div class="inner">
+    <div class="content">
+      <header>
+        <h2>A VR Music<br>Video Experience</h2>
+        <h3>Featuring Martina Sorbara</h3>
+      </header>
+      <div class="description">
+        <p>Transport yourself to another world in this surreal VR music video for <strong class="nowrap">Martina Sorbara</strong> and Castle Frank’s song "A Grand Expanse". Co-developed by Tendril and Drew Lightfoot, the experience was created by using a combination of 3D + 2D assets, along with the abstract heroine's performance captured live as point cloud data and then projected into the 360-degree animated space.</p>
+      </div>
+    </div>
+  </div>
+  <div class="images">
+    <div class="bg"></div>
+    <div class="slides">
+      <%= image_tag 'screen1.jpg' %>
+      <%= image_tag 'screen2.jpg' %>
+      <%= image_tag 'screen3.jpg' %>
+    </div>
+  </div>
+</section>
+
+
+
+<!--
+=====================================================================
+Credits
+=====================================================================
+-->
+<section id="credits" ng-class="{'active': 'credits' == activeSection}">
+  <div class="inner">
+    <div class="content">
+      <header>
+        <h2>THE TEAM BEHIND THE 360 EXPERIENCE</h2>
+      </header>
+      <ul>
+        <li>
+          <h3><a href="http://tendril.ca" target="_blank"><%= image_tag 'logo_tendril.svg', :alt => 'Tendril' %></a></h3>
+          <p><a href="http://tendril.ca" target="_blank"><strong>Tendril</strong></a> is an international production studio with a passion for design-driven stories and experiences. With offices in Toronto and Sao Paulo, their staff consists of truly creative people who have a shared ethos: create stunning work that gets noticed.</p>
+        </li>
+        <li>
+          <h3><a href="http://someplacenice.tv" target="_blank"><%= image_tag 'logo_someplace.svg', :alt => 'Someplace Nice' %></a></h3>
+          <p><a href="http://someplacenice.tv" target="_blank"><strong>Someplace Nice</strong></a> is a boutique production company based in Toronto, Canada that produces award-winning broadcast, digital, and print.</p>
+        </li>
+        <li>
+          <h3><a href="http://graysonmatthews.com" target="_blank"><%= image_tag 'logo_grayson.svg', :alt => 'Grayson Matthews' %></a></h3>
+          <p><a href="http://graysonmatthews.com" target="_blank"><strong>Grayson Matthews</strong></a> is a creative audio agency who love music and sound, making both with their hands and hearts.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<!--
+=====================================================================
+Footer
+=====================================================================
+-->
+<footer id="footer">
+  <div class="inner">
+    <ul>
+      <li class="sound-wrapper">
+        <div class="bars" ng-class="{'playing': isSoundPlaying == true }" ge-toggle-sound>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="sound-label">Music off</div>
+        </div>
+      </li>
+      <li class="powered">
+        <a href="https://www.google.com/get/cardboard/"  target="_blank">
+          <%= image_tag 'logo_cardboard.svg' %>
+          <span class="tooltiptext">Google<br>Cardboard</span>
+        </a>
+      </li>
+      <%# <li class="download"><a href="#" class="button">Download</a></li> %>
+      <li class="download"><a class="button inactive">Download soon</a></li>
+    </ul>
+  </div>
+</footer>

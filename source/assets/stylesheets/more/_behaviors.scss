@@ -1,0 +1,87 @@
+@media screen and ( min-width: rem($s-desktop) ) {
+
+.active-credits,
+.active-about {
+  #wrapper {
+    border-width: 1vh;
+  }
+  #home {
+    opacity: 0;
+  }
+}
+
+// ============================================================
+// ACTIVE: About
+// ============================================================
+.active-about {
+  #header {
+    nav {
+      ul {
+        li {
+          color: black;
+          &.link-home {
+            img {
+              -webkit-filter: none;
+              filter: none;
+            }
+            .a,
+            .b {
+              background: black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #footer {
+    .powered {
+      img {
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+      }
+      .tooltiptext {
+        //background-color: black;
+        color: black;
+        font-weight: 400;
+
+        &::after {
+          border-color: transparent transparent transparent black;
+        }
+      }
+    }
+    .button {
+      transition: all 1200ms linear;
+      color: white;
+      background: black;
+    }
+  }
+
+  #about {
+    .content {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    .images {
+      margin-left: -69.85vw;
+    }
+  }
+}
+
+// ============================================================
+// ACTIVE: Credits
+// ============================================================
+.active-credits {
+  #footer {
+    .sound-wrapper {
+      color: black;
+      .bars {
+        .bar {
+          background: black;
+        }
+      }
+    }
+  }
+}
+
+}

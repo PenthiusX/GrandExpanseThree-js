@@ -1,0 +1,86 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <!-- title -->
+    <title><%= data.app.title %></title>
+
+    <!-- metatags: general -->
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1"          http-equiv="X-UA-Compatible">
+    <meta name="viewport"                     content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- metatags: search engines -->
+    <meta name="keywords"                     content="<%= data.app.keyworkds %>">
+    <meta name="description"                  content="<%= data.app.description %>">
+    <meta name="image"                        content="<%= data.app.img %>">
+
+    <!-- metatags: facebook -->
+    <meta property="og:title"                 content="<%= data.app.title %>">
+    <meta property="og:description"           content="<%= data.app.description %>">
+    <meta property="og:url"                   content="<%= data.app.url %>">
+    <meta property="og:site_name"             content="<%= data.app.title %>">
+    <meta property="og:image"                 content="<%= data.app.img %>">
+
+    <!-- metatags: twitter -->
+    <meta property="twitter:title"            content="<%= data.app.title %>">
+    <meta property="twitter:description"      content="<%= data.app.description %>">
+    <meta property="twitter:url"              content="<%= data.app.url %>">
+    <meta property="twitter:image"            content="<%= data.app.img %>">
+
+    <!-- metatags: google plus -->
+    <meta itemprop="name"                     content="<%= data.app.title %>">
+    <meta itemprop="description"              content="<%= data.app.description %>">
+    <meta itemprop="image"                    content="<%= data.app.img %>">
+
+    <!-- fonts -->
+    <script src="https://use.typekit.net/wst3fhk.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- stylesheets -->
+    <%= stylesheet_link_tag :site %>
+
+    <!-- javascripts -->
+    <%= javascript_include_tag :head %>
+  </head>
+
+  <body ng-controller="MainController" class="active-{{activeSection}}">
+    <div id="wrapper">
+      <%= yield %>
+    </div>
+    <div id="main-frame"></div>
+    <div id="webgl-holder"></div>
+    <div id="loading">
+      <div class="loading-holder">
+        <p class="loading-percentage">loading<br>0%</p>
+      </div>
+    </div>
+    <div id="fadetoblack"></div>
+    <div id="wrapper-border"></div>
+
+    <!--
+    =====================================================================
+    Call to TIFF
+    =====================================================================
+    -->
+    <div id="notification">
+      <a href="http://tiff.net/pop01" target="_blank">
+        <!-- <p class="tiff-logo">
+          <%= image_tag 'logo_tiff.svg' %>
+          <span>presents:</span>
+        </p> -->
+        <!-- <span>WORLD PREMIERE AT TIFF</span> -->
+        <!-- <span>TIFFxPOP01</span> -->
+        <!-- <span>JUNE 24-26, 2016</span> -->
+        <%= image_tag 'ribbon_tiff.svg' %>
+      </a>
+    </div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/threejs/r72/three.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.2/amplify.core.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <%= javascript_include_tag :all %>
+  </body>
+</html>

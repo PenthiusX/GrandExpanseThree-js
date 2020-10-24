@@ -1,0 +1,89 @@
+* {
+  &,
+  &::after,
+  &::before {
+    // box-sizing: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+  }
+}
+
+html, body {
+  min-height: 100%;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  transform-origin: top left;
+}
+
+body {
+  background: white;
+  font-family: "museo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+ul, ol {
+  display: block;
+  list-style: none;
+}
+
+li {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: inherit;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+i {
+  font-style: normal;
+}
